@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manu Tavares Make up</title>
+    <style>
+        body {
+            font-family: 'Arial Narrow', sans-serif;
+            background-color: #f0f8f6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #47bfa1;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lucida Handwriting', cursive;
+            margin: 0;
+        }
+
+        p, a, li {
+            font-family: 'Courier New', monospace;
+        }
+
+        /* Estilos adicionais ... */
+        .navigation {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .navigation li {
+            margin: 0 10px;
+            list-style: none;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navigation a:hover {
+            background-color: #f06292;
+            color: #fff;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .contact-info p {
+            margin: 0;
+        }
+
+        .contact-info a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        .contact-info a i {
+            margin-right: 5px;
+        }
+
+        .instagram-button {
+            background-color: #f06292;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .instagram-button:hover {
+            background-color: #d81b60;
+        }
+
+        .whatsapp-button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #3e8e41;
+        }
+
+        /* Estilos para as páginas de Início e Contato */
+        .inicio-page {
+            background-color: #a0ede7;
+            padding: 20px;
+            text-align: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .contato-page {
+            background-color: #a3e4d7;
+            padding: 20px;
+            text-align: center;
+            height: 100vh;
+        }
+
+        .contact-info-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .contact-info-container p {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info-container a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-bottom: 10px;
+        }
+
+        .contact-info-container a:hover {
+            background-color: #f06292;
+            color: #fff;
+        }
+
+        .contact-info-container .phone-icon {
+            margin-right: 5px;
+        }
+
+        /* Estilos para a planilha de horários */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #47bfa1;
+            color: #fff;
+        }
+
+        /* Estilos para os botões */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .button-container a {
+            margin: 0 10px;
+        }
+
+        @media (max-width: 768px) {
+            .contact-info-container {
+                height: auto;
+            }
+
+            .button-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Manu Tavares Make up</h1>
+        <p class="subtitle">O seu espaço de beleza e maquiagem</p>
+    </header>
+
+    <nav>
+        <ul class="navigation">
+            <li><a href="#" onclick="openInicioPage()">Início</a></li>
+            <li><a href="#" onclick="openContatoPage()">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="inicioPage" class="inicio-page" style="display: none;">
+            <h2>Horários de Atendimento</h2>
+            <table>
+                <tr>
+                    <th>Dia da Semana</th>
+                    <th>Horário</th>
+                </tr>
+                <tr>
+                    <td>Segunda-feira</td>
+                    <td>9h - 18h</td>
+                </tr>
+                <tr>
+                    <td>Terça-feira</td>
+                    <td>9h - 18h</td>
+                </tr>
+                <tr>
+                    <td>Quarta-feira</td>
+                    <td>9h - 18h</td>
+                </tr>
+                <tr>
+                    <td>Quinta-feira</td>
+                    <td>9h - 18h</td>
+                </tr>
+                <tr>
+                    <td>Sexta-feira</td>
+                    <td>9h - 18h</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="contatoPage" class="contato-page" style="display: none;">
+            <div class="contact-info-container">
+                <p>Entre em contato conosco:</p>
+                <div class="button-container">
+                    <a href="tel:16 98819-0744" class="contact-button">
+                        <i class="fas fa-phone phone-icon"></i> (16) 98819-0744
+                    </a>
+                    <a href="mailto:contato@manutavaresmakeup.com" class="contact-button">
+                        <i class="fas fa-envelope"></i> contato@manutavaresmakeup.com
+                    </a>
+                    <a href="https://www.instagram.com/w1b_manu/" target="_blank" class="instagram-button">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=16988190744&text=Olá%21%20Eu%20gostaria%20de%20agendar%20um%20horário%20📝💄" target="_blank" class="whatsapp-button">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2023 Manu Tavares Make up. Todos os direitos reservados.
+    </footer>
+
+    <script>
+        function openInicioPage() {
+            document.getElementById('inicioPage').style.display = 'block';
+            document.getElementById('contatoPage').style.display = 'none';
+        }
+
+        function openContatoPage() {
+            document.getElementById('inicioPage').style.display = 'none';
+            document.getElementById('contatoPage').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
